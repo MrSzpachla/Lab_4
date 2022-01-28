@@ -14,6 +14,7 @@ public class Main {
         d) stworzyć jedną metodę z 2 parametrami wymyśloną przez siebie,
         */
 
+
         /* zad.2
         a) napisać klasę Dom implementującą interfejs Budynek,
         b) zaimplementować wszystkie metody,
@@ -30,5 +31,16 @@ public class Main {
         d) sprawdzić czy idzie wywołać z obu instancji objektu (deklaracja z interfejsu i z klasy)
         metodę której nie ma zadeklarowane w interfejsie Budynek, ale jest dopisana w klassie Dom,
         */
+
+        Dom budynek1 = new Dom();
+        Budynek budynek2 = new Dom();
+        budynek1.adresBudynku("Gdansk","Rzemieslnicza",13,"1","83-00");
+        budynek1.powierzchnia(60,70,10);
+        budynek1.pietra(2,true);
+        budynek1.setKolor(Budynek.KolorEnum.Czerwony);
+        budynek1.setLiczbamieszkancow(4);
+        budynek1.setLiczbaokien(6);
+        budynek1.powierzchniacalkowita();
+
     }
 }
