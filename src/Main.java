@@ -14,5 +14,11 @@ public class Main {
         c) stworzyć objekty tych klas i wyświetlić przykładowe wyliczenia
         */
 
+        Kwadrat k1 = new Kwadrat();
+        System.out.println(k1.pole(5));
+        System.out.println(k1.obwod(5));
+        k1.nazwaFigury("Kwadrat");
+
+
     }
 }
