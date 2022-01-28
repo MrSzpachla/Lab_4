@@ -1,33 +1,43 @@
 public class Dom implements Budynek {
 
-   /* a) napisać klasę Dom implementującą interfejs Budynek,
-    b) zaimplementować wszystkie metody,
-    c) stworzyć brakujące pola(prywatne), gettery i settery, napisać metodę toString
-        (gettery i settery najlepiej wygenerować: Code/Prawy myszy --> Generate --> getters/setters/toString)
-    d) stworzyć jedną dowolną metodę przez siebie (nie deklarujemy tej metody w interfejsie),
-        */
-    /*private double powieBudynku;
-    private double powPodworka;
-    private double powParkingu;
+    /* a) napisać klasę Dom implementującą interfejs Budynek,
+        b) zaimplementować wszystkie metody,
+        c) stworzyć brakujące pola(prywatne), gettery i settery, napisać metodę toString
+            (gettery i settery najlepiej wygenerować: Code/Prawy myszy --> Generate --> getters/setters/toString)
+        d) stworzyć jedną dowolną metodę przez siebie (nie deklarujemy tej metody w interfejsie),
+            */
+    private double powierzchniacal;
+    private int liczbaokien;
+    private int liczbamieszkancow;
+    private KolorEnum kolor;
+    private double powB;
+    private double powP;
+    private double powPa;
     private String miejscowosc;
     private String ulica;
     private int nrDomu;
     private String nrLokalu;
     private String kodPocztowy;
-    private double powierzchnia;
-    private double cena;*/
-    private int liczbaokien;
-    private int liczbamieszkancow;
-    private KolorEnum kolor;
+    private int value;
+    private boolean piwnica;
+    public double c;
 
 
     @Override
     public double powierzchnia(double powBudynku, double powPodworka, double powParkingu) {
-        return powierzchnia( powBudynku, powPodworka,powParkingu);
+        this.powB = powBudynku;
+        this.powP = powPodworka;
+        this.powPa = powParkingu;
+        return 0;
     }
 
     @Override
     public String adresBudynku(String miejscowosc, String ulica, int nrDomu, String nrLokalu, String kodPocztowy) {
+        this.miejscowosc = miejscowosc;
+        this.ulica = ulica;
+        this.nrDomu = nrDomu;
+        this.nrLokalu = nrLokalu;
+        this.kodPocztowy = kodPocztowy;
         return null;
     }
 
@@ -48,12 +58,14 @@ public class Dom implements Budynek {
 
     @Override
     public double wyliczCene(double powierzchnia, double cena) {
-        return 0;
+        c = cena * powierzchnia;
+        return c;
     }
 
     @Override
     public void pietra(int value, boolean piwnica) {
-
+        this.value = value;
+        this.piwnica = piwnica;
     }
 
     public int getLiczbaokien() {
@@ -68,14 +80,6 @@ public class Dom implements Budynek {
         return kolor;
     }
 
-    @Override
-    public String toString() {
-        return "Dom{" +
-                "liczbaokien=" + liczbaokien +
-                ", liczbamieszkancow=" + liczbamieszkancow +
-                ", kolor=" + kolor +
-                '}';
-    }
 
     public void setLiczbaokien(int liczbaokien) {
         this.liczbaokien = liczbaokien;
@@ -89,10 +93,47 @@ public class Dom implements Budynek {
         this.kolor = kolor;
     }
 
+    public double getPowB() {
+        return powB;
+    }
 
-    public double powierzchniacalkowita()
+    public double getPowP() {
+        return powP;
+    }
+
+    public double getPowPa() {
+        return powPa;
+    }
+
+    public double getPowierzchniacal() {
+        return powierzchniacal;
+    }
+
+    public double powierzchniacalkowita(double p1, double p2, double p3)
     {
-        double suma = powierzchnia(double po);
-        return suma;
+        powierzchniacal = p1 + p2 + p3;
+        return powierzchniacal;
+    }
+
+    @Override
+    public String toString() {
+        return "Dom:" +
+                "\nMiejscowosc: " + miejscowosc +
+                "\nKod Pocztowy: " + kodPocztowy +
+                "\nUlica: " + ulica +
+                "\nNrDomu: " + nrDomu +
+                "\nNrLokalu: " + nrLokalu +
+                "\nNrDomu: " + nrDomu +
+                "\nLiczba pieter: " + value +
+                "\nPiwnica: " + piwnica +
+                "\nliczba Okien: " + getLiczbaokien() +
+                "\nLiczba Mieszkancow: " + liczbamieszkancow +
+                "\nKolor: " + kolor +
+                "\nPowierzchnia Budynku: " + powB +
+                " Podworka: " + powP +
+                " Parkingu" + powPa +
+                "\nPowierzchnia cal.: " + powierzchniacal +
+                "\nCena: " + c +
+                '\n';
     }
 }

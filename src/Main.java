@@ -40,7 +40,19 @@ public class Main {
         budynek1.setKolor(Budynek.KolorEnum.Czerwony);
         budynek1.setLiczbamieszkancow(4);
         budynek1.setLiczbaokien(6);
-        budynek1.powierzchniacalkowita();
+        budynek1.powierzchniacalkowita(budynek1.getPowB(),budynek1.getPowP(),budynek1.getPowPa());
+        budynek1.wyliczCene(budynek1.getPowierzchniacal(),2559);
+
+        budynek2.adresBudynku("Braniewo","Bema",18,"3","14-500");
+        budynek1.powierzchnia(30,40,5);
+        budynek1.pietra(1,false);
+        budynek1.setKolor(Budynek.KolorEnum.Zielony);
+        budynek1.setLiczbamieszkancow(2);
+        budynek1.setLiczbaokien(4);
+        budynek1.powierzchniacalkowita(budynek1.getPowB(),budynek1.getPowP(),budynek1.getPowPa());
+        budynek1.wyliczCene(budynek1.getPowierzchniacal(),1598);
+
+        System.out.println(budynek1.toString());
 
     }
 }
