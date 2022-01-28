@@ -41,18 +41,19 @@ public class Main {
         budynek1.setLiczbamieszkancow(4);
         budynek1.setLiczbaokien(6);
         budynek1.powierzchniacalkowita(budynek1.getPowB(),budynek1.getPowP(),budynek1.getPowPa());
-        budynek1.wyliczCene(budynek1.getPowierzchniacal(),2559);
+        budynek1.wyliczCene(budynek1.getPowierzchniacal(),7559);
 
         budynek2.adresBudynku("Braniewo","Bema",18,"3","14-500");
-        budynek1.powierzchnia(30,40,5);
-        budynek1.pietra(1,false);
-        budynek1.setKolor(Budynek.KolorEnum.Zielony);
-        budynek1.setLiczbamieszkancow(2);
-        budynek1.setLiczbaokien(4);
-        budynek1.powierzchniacalkowita(budynek1.getPowB(),budynek1.getPowP(),budynek1.getPowPa());
-        budynek1.wyliczCene(budynek1.getPowierzchniacal(),1598);
+        budynek2.powierzchnia(30,40,5);
+        budynek2.pietra(1,false);
+        ((Dom) budynek2).setKolor(Budynek.KolorEnum.Zielony);
+        ((Dom) budynek2).setLiczbamieszkancow(2);
+        ((Dom) budynek2).setLiczbaokien(4);
+        ((Dom) budynek2).powierzchniacalkowita(((Dom) budynek2).getPowB(), ((Dom) budynek2).getPowP(), ((Dom) budynek2).getPowPa());
+        budynek2.wyliczCene(((Dom) budynek2).getPowierzchniacal(),3598);
 
-        System.out.println(budynek1.toString());
+        System.out.println(budynek1);
+        System.out.println(budynek2);
 
     }
 }

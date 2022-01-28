@@ -130,10 +130,10 @@ public class Dom implements Budynek {
                 "\nLiczba Mieszkancow: " + liczbamieszkancow +
                 "\nKolor: " + kolor +
                 "\nPowierzchnia Budynku: " + powB +
-                " Podworka: " + powP +
-                " Parkingu" + powPa +
-                "\nPowierzchnia cal.: " + powierzchniacal +
-                "\nCena: " + c +
-                '\n';
+                " m2 Podworka: " + powP +
+                " m2 Parkingu: " + powPa +
+                " m2\nPowierzchnia cal.: " + powierzchniacal +
+                " m2\nCena: " + c +
+                " zl\n\n";
     }
 }
