@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
 
         /* zad.1
-        a) napisać interfejs CzlowiekI,
+        a) napisać interfejs CzlowiekI,ddd
         b) zadeklarować 2 metody,
 
         c) napisać interfejs StudentI który dziedziczy po interfejsie CzlowiekI,
