@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Main {
 
@@ -20,6 +21,33 @@ public class Main {
            boolean isIndexCorrect
            white(!isIndexCorrect) {}
         */
+        int x = 0;
+        boolean isIndexCorrect = false;
+        Scanner scan = new Scanner(System.in);
+        String tab[] = {"Toyota", "Opel","KIA","Volvo","Mazda","Citroen"};
+        while (!isIndexCorrect)
+        {
+            System.out.println("Podaj indeks tablicy [0-5]: ");
+            try {
+                x = Integer.parseInt(scan.next());
+            } catch (NumberFormatException e) {
+                System.out.println("Błąd, wprowadzony znak nie jest cyfrą!");
+                throw e;
+            }
+
+            if (x < 6 && x >= 0) {
+                try {
+                    System.out.println(tab[x]);
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    System.out.println("Błąd Podałeś index: " + x + ", a dozwolone są od 0 do " + (tab.length - 1));
+                } finally {
+                    System.out.println("Koniec programu");
+                    isIndexCorrect = true;
+                }
+            }
+
+        }
+
 
 
         /* zad.2
@@ -27,6 +55,8 @@ public class Main {
         b) stworzyć dowolny przykład z ArithmeticException ,
         c) stworzyć dowolny przykład z 2 lub 3 blokami catch i z blokiem finally,
          */
+
+
 
     }
 }
