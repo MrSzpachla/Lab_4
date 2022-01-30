@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+
+
 public class Main {
 
     public static void main(String[] args) {
@@ -35,16 +37,17 @@ public class Main {
                 throw e;
             }
 
-            if (x < 6 && x >= 0) {
+
                 try {
                     System.out.println(tab[x]);
                 } catch (ArrayIndexOutOfBoundsException e) {
                     System.out.println("Błąd Podałeś index: " + x + ", a dozwolone są od 0 do " + (tab.length - 1));
                 } finally {
+                    if (x < 6 && x >= 0) {
                     System.out.println("Koniec programu");
-                    isIndexCorrect = true;
+                    isIndexCorrect = true;}
                 }
-            }
+
 
         }
 
@@ -56,7 +59,30 @@ public class Main {
         c) stworzyć dowolny przykład z 2 lub 3 blokami catch i z blokiem finally,
          */
 
+        // a)
 
+        String text = null;
+        try
+        {
+            if (text.equals("abc"))
+                System.out.println("Zmienna zawiera 'abc'");
+            else
+                System.out.println("Zmienna ma inna wartosc");
+        }
+        catch(NullPointerException e)
+        {
+            System.out.println("NullPointerException Caught! Zmienna jest ,,pusta''");
+        }
+
+
+        // b)
+        int a = 10;
+        int b = 0;
+        try {
+            System.out.println(a / b);
+        }catch (ArithmeticException e){
+            System.out.println("\nNie dzielimy przez 0!!");
+        }
 
     }
 }
